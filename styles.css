@@ -6,6 +6,10 @@
   fill: rgb(9, 255, 58);
 }
 
+.guard {
+  fill: bisque;
+}
+
 svg {
   width: 400px;
   height: 400px;

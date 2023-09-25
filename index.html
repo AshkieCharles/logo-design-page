@@ -7,38 +7,77 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 488">
-    <g filter="url(#a)">
-      <path class="handle" d="M57 380v-94h32v94H57Z" fill="#7D612C" stroke="#000"/>
-      <path class="guard" d="m26 289-13-44 61 23 51-23-15 44-36 29-48-29Z" fill="#B40D0D" stroke="#000"/>
-      <g filter="url(#b)">
-        <path class="sword" d="M44 270V58l22-40 20 40 8 212-22 11-28-11Z" fill="#031BFC"/>
-        <path d="M44 58v212l28 11M44 58l22-40M44 58h22m0-40 20 40M66 18v40m20 0 8 212-22 11M86 58H66m6 223L66 58" stroke="#000"/>
+  <div>
+    <h2>Before CSS</h2>
+    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 488">
+      <g filter="url(#a)">
+        <path d="M57 380v-94h32v94H57Z" fill="#7D612C" stroke="#000"/>
+        <path d="m26 289-13-44 61 23 51-23-15 44-36 29-48-29Z" fill="#B40D0D" stroke="#000"/>
+        <g filter="url(#b)">
+          <path d="M44 270V58l22-40 20 40 8 212-22 11-28-11Z" fill="#031BFC"/>
+          <path d="M44 58v212l28 11M44 58l22-40M44 58h22m0-40 20 40M66 18v40m20 0 8 212-22 11M86 58H66m6 223L66 58" stroke="#000"/>
+        </g>
+        <ellipse cx="74" cy="380" rx="20" ry="21" fill="#D9D9D9"/>
       </g>
-      <ellipse cx="74" cy="380" rx="20" ry="21" fill="#D9D9D9"/>
-    </g>
-    <defs>
-      <filter id="a" x="0" y="0" width="148" height="492" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-        <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-        <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-        <feOffset dy="4"/>
-        <feGaussianBlur stdDeviation="2"/>
-        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-        <feBlend in2="shape" result="effect1_innerShadow_18_9"/>
-      </filter>
-      <filter id="b" x="39.5" y="16.9" width="59" height="272.1" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-        <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-        <feOffset dy="4"/>
-        <feGaussianBlur stdDeviation="2"/>
-        <feComposite in2="hardAlpha" operator="out"/>
-        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-        <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_18_9"/>
-        <feBlend in="SourceGraphic" in2="effect1_dropShadow_18_9" result="shape"/>
-      </filter>
-    </defs>
-  </svg>  
+      <defs>
+        <filter id="a" x="0" y="0" width="148" height="492" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+          <feBlend in2="shape" result="effect1_innerShadow_18_9"/>
+        </filter>
+        <filter id="b" x="39.5" y="16.9" width="59" height="272.1" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+          <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_18_9"/>
+          <feBlend in="SourceGraphic" in2="effect1_dropShadow_18_9" result="shape"/>
+        </filter>
+      </defs>
+    </svg>    
+  </div>
+  <div>
+    <h2>After CSS</h2>
+    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 488">
+      <g filter="url(#a)">
+        <path class="handle" d="M57 380v-94h32v94H57Z" fill="#7D612C" stroke="#000"/>
+        <path class="guard" d="m26 289-13-44 61 23 51-23-15 44-36 29-48-29Z" fill="#B40D0D" stroke="#000"/>
+        <g filter="url(#b)">
+          <path class="sword" d="M44 270V58l22-40 20 40 8 212-22 11-28-11Z" fill="#031BFC"/>
+          <path d="M44 58v212l28 11M44 58l22-40M44 58h22m0-40 20 40M66 18v40m20 0 8 212-22 11M86 58H66m6 223L66 58" stroke="#000"/>
+        </g>
+        <ellipse cx="74" cy="380" rx="20" ry="21" fill="#D9D9D9"/>
+      </g>
+      <defs>
+        <filter id="a" x="0" y="0" width="148" height="492" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+          <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+          <feBlend in2="shape" result="effect1_innerShadow_18_9"/>
+        </filter>
+        <filter id="b" x="39.5" y="16.9" width="59" height="272.1" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+          <feOffset dy="4"/>
+          <feGaussianBlur stdDeviation="2"/>
+          <feComposite in2="hardAlpha" operator="out"/>
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+          <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_18_9"/>
+          <feBlend in="SourceGraphic" in2="effect1_dropShadow_18_9" result="shape"/>
+        </filter>
+      </defs>
+    </svg>  
+  </div>
 </body>
 </html>
